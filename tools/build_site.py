@@ -94,13 +94,14 @@ def frame(lang, page, title, body, counterpart, description, is_home=False):
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{escape(title)} · Realsee × Astra × Blender</title>
   <meta name="description" content="{escape(description, quote=True)}">
-  <meta name="theme-color" content="#faf8f3">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="{url('assets/style.css')}">
   <link rel="alternate" hreflang="{'en' if zh else 'zh-CN'}" href="{url(counterpart)}">
 </head>
 <body class="{'home' if is_home else 'docs'}">
 <a class="skip-link" href="#main">{'跳到正文' if zh else 'Skip to content'}</a>
 <header class="site-header">
+<div class="header-inner">
   <a class="brand" href="{url(home(lang))}">Realsee × Astra × Blender</a>
   <nav class="header-nav" aria-label="{'主导航' if zh else 'Main navigation'}">
     <a href="{tutorial}">{'图文教程' if zh else 'Tutorial'}</a>
@@ -108,6 +109,7 @@ def frame(lang, page, title, body, counterpart, description, is_home=False):
     <a href="{REPO}">GitHub ↗</a>
   </nav>
   <a class="language-switch" href="{url(counterpart)}" lang="{'en' if zh else 'zh-CN'}" hreflang="{'en' if zh else 'zh-CN'}">{'English' if zh else '简体中文'}</a>
+</div>
 </header>
 {body}
 <footer class="site-footer">
