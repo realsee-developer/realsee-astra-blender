@@ -1,0 +1,9 @@
+Case assets for Realsee Astra Blender
+
+The project author has authorized public sharing of these previews and final models for demonstration and learning reference. The repository MIT license covers code, prompts and original documentation. It does not relicense original scan imagery, textures, third-party generated content, depicted artwork, or other third-party materials embedded in the case assets. Their respective rights remain with their sources.
+
+The .blend files include editable native geometry, packed textures, and a hidden original scan reference. The source data directory (full point clouds, panoramas, RAW images and other exports) is not part of the public repository.
+
+For public distribution, personal image-path metadata is normalized in separate copies of the .blend files. Unknown on-site QR codes are removed from the public copies. Paper and packaging geometry remains editable; affected image materials use neutral colors, and the source images containing these codes are removed, including affected scan-reference atlases. Geometry and animation are checked after reopening; the remaining packed image contents are preserved. Original local deliverables remain unchanged. Checksums for these public copies are supplied separately.
+
+The USDZ is a first exchange version with estimated physics parameters and documented material approximations. The MP4 is an 85-second Blender-rendered walkthrough with local redaction masks over the QR-code regions.

@@ -1,0 +1,579 @@
+{
+  "fps": 24,
+  "eye_height_m": 1.5,
+  "lens_mm": 21,
+  "keyframes": [
+    {
+      "time_s": 0.0,
+      "position": [
+        3.3,
+        0.08,
+        1.5
+      ],
+      "yaw_deg": 180,
+      "pitch_deg": -3,
+      "label": "AREA_Corridor | East entrance gallery"
+    },
+    {
+      "time_s": 3.0,
+      "position": [
+        1.25,
+        0.08,
+        1.5
+      ],
+      "yaw_deg": 180,
+      "pitch_deg": -3,
+      "label": "Gallery approach"
+    },
+    {
+      "time_s": 6.0,
+      "position": [
+        -0.95,
+        0.4,
+        1.5
+      ],
+      "yaw_deg": 145,
+      "pitch_deg": -3,
+      "label": "Turn into central corridor"
+    },
+    {
+      "time_s": 7.8,
+      "position": [
+        -1.05,
+        1.5,
+        1.5
+      ],
+      "yaw_deg": 55,
+      "pitch_deg": -3,
+      "label": "Approach bar opening"
+    },
+    {
+      "time_s": 8.6,
+      "position": [
+        -1.05,
+        1.85,
+        1.5
+      ],
+      "yaw_deg": 20,
+      "pitch_deg": -2,
+      "label": "Align with bar portal"
+    },
+    {
+      "time_s": 9.6,
+      "position": [
+        -0.48,
+        1.85,
+        1.5
+      ],
+      "yaw_deg": 0,
+      "pitch_deg": -2,
+      "label": "AREA_Bar | Through observed metal jambs"
+    },
+    {
+      "time_s": 10.8,
+      "position": [
+        0.24,
+        1.87,
+        1.5
+      ],
+      "yaw_deg": 0,
+      "pitch_deg": -3,
+      "label": "Bar overview"
+    },
+    {
+      "time_s": 12.0,
+      "position": [
+        0.24,
+        1.87,
+        1.5
+      ],
+      "yaw_deg": 0,
+      "pitch_deg": 2,
+      "label": "Bottle shelves and counter"
+    },
+    {
+      "time_s": 13.3,
+      "position": [
+        0.24,
+        1.87,
+        1.5
+      ],
+      "yaw_deg": 52,
+      "pitch_deg": -4,
+      "label": "North wall gallery and robots"
+    },
+    {
+      "time_s": 16.0,
+      "position": [
+        0.24,
+        1.87,
+        1.5
+      ],
+      "yaw_deg": 180,
+      "pitch_deg": -3,
+      "label": "Turn toward bar exit"
+    },
+    {
+      "time_s": 17.1,
+      "position": [
+        -0.48,
+        1.85,
+        1.5
+      ],
+      "yaw_deg": 180,
+      "pitch_deg": -3,
+      "label": "Leave bar through same portal"
+    },
+    {
+      "time_s": 18.1,
+      "position": [
+        -1.05,
+        1.85,
+        1.5
+      ],
+      "yaw_deg": 208,
+      "pitch_deg": -3,
+      "label": "Return to corridor"
+    },
+    {
+      "time_s": 20.0,
+      "position": [
+        -2.35,
+        1.15,
+        1.5
+      ],
+      "yaw_deg": 185,
+      "pitch_deg": -3,
+      "label": "Align with photography opening"
+    },
+    {
+      "time_s": 21.6,
+      "position": [
+        -3.481338,
+        1.094853,
+        1.5
+      ],
+      "yaw_deg": 180,
+      "pitch_deg": -3,
+      "label": "AREA_Photography | Open entrance frame"
+    },
+    {
+      "time_s": 23.0,
+      "position": [
+        -4.35,
+        1.16,
+        1.5
+      ],
+      "yaw_deg": 165,
+      "pitch_deg": -5,
+      "label": "Glide down display aisle"
+    },
+    {
+      "time_s": 25.0,
+      "position": [
+        -5.5,
+        1.2,
+        1.5
+      ],
+      "yaw_deg": 140,
+      "pitch_deg": -6,
+      "label": "North display rack"
+    },
+    {
+      "time_s": 27.0,
+      "position": [
+        -6.8,
+        1.2,
+        1.5
+      ],
+      "yaw_deg": 120,
+      "pitch_deg": -6,
+      "label": "North gold bag display"
+    },
+    {
+      "time_s": 29.0,
+      "position": [
+        -6.8,
+        1.2,
+        1.5
+      ],
+      "yaw_deg": 180,
+      "pitch_deg": -4,
+      "label": "West reflectors and equipment"
+    },
+    {
+      "time_s": 31.0,
+      "position": [
+        -6.8,
+        1.2,
+        1.5
+      ],
+      "yaw_deg": 240,
+      "pitch_deg": -7,
+      "label": "South gold bag display and garments"
+    },
+    {
+      "time_s": 34.0,
+      "position": [
+        -6.8,
+        1.2,
+        1.5
+      ],
+      "yaw_deg": 360,
+      "pitch_deg": -3,
+      "label": "Turn to face photography exit"
+    },
+    {
+      "time_s": 36.0,
+      "position": [
+        -5.5,
+        1.2,
+        1.5
+      ],
+      "yaw_deg": 355,
+      "pitch_deg": -3,
+      "label": "Return through clear aisle"
+    },
+    {
+      "time_s": 38.0,
+      "position": [
+        -4.35,
+        1.16,
+        1.5
+      ],
+      "yaw_deg": 360,
+      "pitch_deg": -3,
+      "label": "Softbox beside exit"
+    },
+    {
+      "time_s": 39.4,
+      "position": [
+        -3.481338,
+        1.094853,
+        1.5
+      ],
+      "yaw_deg": 360,
+      "pitch_deg": -3,
+      "label": "Through photography entrance frame"
+    },
+    {
+      "time_s": 40.7,
+      "position": [
+        -2.65,
+        1.15,
+        1.5
+      ],
+      "yaw_deg": 390,
+      "pitch_deg": -3,
+      "label": "AREA_Corridor | Turn north toward game room"
+    },
+    {
+      "time_s": 42.8,
+      "position": [
+        -2.65,
+        2.75,
+        1.5
+      ],
+      "yaw_deg": 450,
+      "pitch_deg": -3,
+      "label": "West side of central corridor"
+    },
+    {
+      "time_s": 43.8,
+      "position": [
+        -2.65,
+        3.436823,
+        1.5
+      ],
+      "yaw_deg": 500,
+      "pitch_deg": -3,
+      "label": "Align with game doorway"
+    },
+    {
+      "time_s": 45.0,
+      "position": [
+        -3.469505,
+        3.436823,
+        1.5
+      ],
+      "yaw_deg": 540,
+      "pitch_deg": -3,
+      "label": "AREA_Game | Pass open hinged door"
+    },
+    {
+      "time_s": 46.1,
+      "position": [
+        -4.18,
+        3.44,
+        1.5
+      ],
+      "yaw_deg": 510,
+      "pitch_deg": -8,
+      "label": "Clear the open door leaf"
+    },
+    {
+      "time_s": 47.2,
+      "position": [
+        -4.55,
+        3.95,
+        1.5
+      ],
+      "yaw_deg": 525,
+      "pitch_deg": -18,
+      "label": "Foosball table overview"
+    },
+    {
+      "time_s": 48.4,
+      "position": [
+        -4.6,
+        4.6,
+        1.5
+      ],
+      "yaw_deg": 555,
+      "pitch_deg": -20,
+      "label": "Foosball pitch and modeled players"
+    },
+    {
+      "time_s": 50.3,
+      "position": [
+        -4.6,
+        4.6,
+        1.5
+      ],
+      "yaw_deg": 480,
+      "pitch_deg": -2,
+      "label": "Turn toward illuminated north panel"
+    },
+    {
+      "time_s": 51.2,
+      "position": [
+        -4.6,
+        4.6,
+        1.5
+      ],
+      "yaw_deg": 480,
+      "pitch_deg": 2,
+      "label": "Galaxy wall and ribbed panel"
+    },
+    {
+      "time_s": 52.2,
+      "position": [
+        -4.6,
+        4.6,
+        1.5
+      ],
+      "yaw_deg": 540,
+      "pitch_deg": -3,
+      "label": "Mirror and lighting sweep"
+    },
+    {
+      "time_s": 54.0,
+      "position": [
+        -4.6,
+        4.6,
+        1.5
+      ],
+      "yaw_deg": 635,
+      "pitch_deg": -3,
+      "label": "Turn toward game exit"
+    },
+    {
+      "time_s": 55.0,
+      "position": [
+        -4.55,
+        3.95,
+        1.5
+      ],
+      "yaw_deg": 650,
+      "pitch_deg": -3,
+      "label": "Return beside table"
+    },
+    {
+      "time_s": 56.0,
+      "position": [
+        -4.18,
+        3.44,
+        1.5
+      ],
+      "yaw_deg": 690,
+      "pitch_deg": -3,
+      "label": "Align with clear doorway"
+    },
+    {
+      "time_s": 57.1,
+      "position": [
+        -3.469505,
+        3.436823,
+        1.5
+      ],
+      "yaw_deg": 720,
+      "pitch_deg": -3,
+      "label": "Pass open game leaf"
+    },
+    {
+      "time_s": 58.3,
+      "position": [
+        -2.65,
+        3.436823,
+        1.5
+      ],
+      "yaw_deg": 765,
+      "pitch_deg": -3,
+      "label": "AREA_Corridor | Continue west of diamond column"
+    },
+    {
+      "time_s": 60.0,
+      "position": [
+        -2.65,
+        4.65,
+        1.5
+      ],
+      "yaw_deg": 780,
+      "pitch_deg": -3,
+      "label": "Clear north end of column"
+    },
+    {
+      "time_s": 60.8,
+      "position": [
+        -2.5,
+        5.15,
+        1.5
+      ],
+      "yaw_deg": 765,
+      "pitch_deg": -3,
+      "label": "Turn toward living entrance"
+    },
+    {
+      "time_s": 62.3,
+      "position": [
+        -1.419753,
+        5.4,
+        1.5
+      ],
+      "yaw_deg": 800,
+      "pitch_deg": -3,
+      "label": "Align with living doorway"
+    },
+    {
+      "time_s": 63.0,
+      "position": [
+        -1.419753,
+        5.856498,
+        1.5
+      ],
+      "yaw_deg": 810,
+      "pitch_deg": -3,
+      "label": "AREA_LivingDining | Pass open hinged leaf"
+    },
+    {
+      "time_s": 64.0,
+      "position": [
+        -1.43,
+        6.4,
+        1.5
+      ],
+      "yaw_deg": 820,
+      "pitch_deg": -5,
+      "label": "Enter below dining furniture"
+    },
+    {
+      "time_s": 65.7,
+      "position": [
+        -2.4,
+        6.85,
+        1.5
+      ],
+      "yaw_deg": 790,
+      "pitch_deg": -15,
+      "label": "Dining table and cane chairs"
+    },
+    {
+      "time_s": 67.2,
+      "position": [
+        -2.4,
+        6.85,
+        1.5
+      ],
+      "yaw_deg": 790,
+      "pitch_deg": -12,
+      "label": "Cabinets and dining details"
+    },
+    {
+      "time_s": 69.6,
+      "position": [
+        -3.9,
+        7.2,
+        1.5
+      ],
+      "yaw_deg": 835,
+      "pitch_deg": -8,
+      "label": "Glide toward seating area"
+    },
+    {
+      "time_s": 72.0,
+      "position": [
+        -5.1,
+        7.38,
+        1.5
+      ],
+      "yaw_deg": 810,
+      "pitch_deg": -10,
+      "label": "Separate sofa sections and cushions"
+    },
+    {
+      "time_s": 75.0,
+      "position": [
+        -5.1,
+        7.38,
+        1.5
+      ],
+      "yaw_deg": 900,
+      "pitch_deg": -1,
+      "label": "Turn toward observed living bay"
+    },
+    {
+      "time_s": 78.2,
+      "position": [
+        -6.5,
+        7.42,
+        1.5
+      ],
+      "yaw_deg": 900,
+      "pitch_deg": -1,
+      "label": "Approach curtain opening without crossing fabric"
+    },
+    {
+      "time_s": 79.3,
+      "position": [
+        -6.5,
+        7.42,
+        1.5
+      ],
+      "yaw_deg": 900,
+      "pitch_deg": 1,
+      "label": "Bay and landscape print"
+    },
+    {
+      "time_s": 83.3,
+      "position": [
+        -6.5,
+        7.42,
+        1.5
+      ],
+      "yaw_deg": 1080,
+      "pitch_deg": -4,
+      "label": "Final wide living and dining view"
+    },
+    {
+      "time_s": 85.0,
+      "position": [
+        -6.5,
+        7.42,
+        1.5
+      ],
+      "yaw_deg": 1080,
+      "pitch_deg": -4,
+      "label": "Wide room ending hold"
+    }
+  ]
+}
