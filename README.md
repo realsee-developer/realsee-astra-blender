@@ -43,7 +43,7 @@ python3 tools/project.py smoke
 | [docs/](docs/tutorial.zh.md) | 上手教程、代码导读、案例预览与文件说明 |
 | [tools/](tools/project.py) | 环境检查、输入盘点、Blender 保存/编辑小测试 |
 | [scripts/](scripts/README.md) | 从项目中选出的空间分析、建模、对照、动画及导出参考代码 |
-| [artifacts/](docs/releases.md) | 成果清单与素材说明；模型和视频稍后通过 Git LFS 提供 |
+| [artifacts/](docs/releases.md) | 原生工程、漫游视频、USDZ 与素材说明；大型文件通过 Git LFS 提供 |
 | [tests/](tests/test_project.py) | 准备工具的轻量测试 |
 | `data/`、`research/`、`output/` | 使用时在本地生成或放入，Git 默认忽略 |
 
@@ -53,9 +53,9 @@ python3 tools/project.py smoke
 
 ![原生空间俯视图](docs/assets/plan.png)
 
-案例最终产物包括原生 `.blend`、可编辑漫游工程、85 秒视频和 USDZ 首版。当前先公开代码、教程与预览图，大型模型和视频稍后通过 Git LFS 提供。文件清单见[案例文件说明](docs/releases.md)。
+案例最终产物包括原生 `.blend`、可编辑漫游工程、85 秒视频和 USDZ 首版。代码、教程、预览图及大型模型和视频现已公开；大型文件通过 Git LFS 提供。文件清单见[案例文件说明](docs/releases.md)。
 
-整套原始扫描及全景数据留在本地，仓库当前包含经整理的代码、文章、预览和成果清单。代码、提示词和原创文档采用 [MIT](LICENSE)，示例模型与素材的范围见[数据与许可](docs/data-and-license.md)。
+整套原始扫描及全景数据留在本地，仓库当前包含经整理的代码、文章、预览和公开成果。代码、提示词和原创文档采用 [MIT](LICENSE)，示例模型与素材的范围见[数据与许可](docs/data-and-license.md)。
 
 ## 开发与贡献
 

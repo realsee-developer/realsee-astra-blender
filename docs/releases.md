@@ -4,20 +4,20 @@
 
 ## 案例文件
 
-当前仓库先公开代码、教程与预览图。以下四个大型成果已在本地整理完成，将稍后通过 Git LFS 提供；目前仓库不包含这些文件或其 LFS 指针。
+以下四个公开成果已通过 Git LFS 提供。点击文件名打开 GitHub 文件页面下载，或按下方说明克隆仓库。
 
 | 文件 | 大小 | 用途 |
 |---|---:|---|
-| `reconstruction_native.blend` | 252 MB | 原生空间工程，包含独立几何、材质、打包贴图和默认隐藏的扫描参考 |
-| `reconstruction_roaming.blend` | 252 MB | 保留相机路线与关键帧的漫游工程 |
-| `reconstruction_roaming.mp4` | 44 MB | 85 秒、24 fps、1280×720 的空间漫游 |
-| `reconstruction_physics_v1.usdz` | 560 MB | 带刚体、碰撞和材质设置的交换文件首版 |
+| [reconstruction_native.blend](../artifacts/reconstruction_native.blend) | 252 MB | 原生空间工程，包含独立几何、材质、打包贴图和默认隐藏的扫描参考 |
+| [reconstruction_roaming.blend](../artifacts/reconstruction_roaming.blend) | 252 MB | 保留相机路线与关键帧的漫游工程 |
+| [reconstruction_roaming.mp4](../artifacts/reconstruction_roaming.mp4) | 44 MB | 85 秒、24 fps、1280×720 的空间漫游 |
+| [reconstruction_physics_v1.usdz](../artifacts/reconstruction_physics_v1.usdz) | 560 MB | 带刚体、碰撞和材质设置的交换文件首版 |
 
 合计约 1.11 GB。文件大小和 SHA256 见 [manifest.json](../artifacts/manifest.json) 与 [SHA256SUMS](../artifacts/SHA256SUMS)。
 
-## 大文件发布后的下载方式
+## 下载模型与视频
 
-待模型和视频发布后，安装 [Git LFS](https://git-lfs.com/) 并克隆仓库，然后在仓库根目录运行：
+安装 [Git LFS](https://git-lfs.com/) 并克隆仓库，然后在仓库根目录运行：
 
 ```sh
 git lfs install --local
@@ -36,7 +36,7 @@ git lfs pull
 
 `.gitattributes` 已为 `artifacts/` 下的 `.blend`、`.usdz` 和 `.mp4` 配置 LFS。`.gitignore` 只放行已审查的文件名；新增成果时同步更新这份清单和校验信息。
 
-准备发布大文件时，先在 `.gitignore` 中放行上表四个文件名，将公开副本放好，再暂存并检查：
+更新时，将经过审查的公开副本放入 `artifacts/`，同步更新 `manifest.json` 与 `SHA256SUMS`，再暂存并检查：
 
 ```sh
 git add .gitattributes artifacts/

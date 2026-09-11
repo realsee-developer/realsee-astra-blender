@@ -43,7 +43,7 @@ python3 tools/project.py smoke
 | [docs/](docs/tutorial.en.md) | Tutorial, code guide, previews, and artifact notes |
 | [tools/](tools/project.py) | Environment checks, input inventory, and Blender save/edit smoke test |
 | [scripts/](scripts/README.en.md) | Selected reference code for source analysis, modeling, comparisons, animation, and export |
-| [artifacts/](docs/releases.en.md) | Artifact manifest and material notices; models and video will be provided later through Git LFS |
+| [artifacts/](docs/releases.en.md) | Native scenes, walkthrough video, USDZ, and material notices; large files are provided through Git LFS |
 | [tests/](tests/test_project.py) | Lightweight tests for the preparation tools |
 | `data/`, `research/`, `output/` | Local inputs and generated files, ignored by Git |
 
@@ -53,9 +53,9 @@ The scripts record the implementation for this particular space. Some use specif
 
 ![Plan view of the native Blender scene](docs/assets/plan.png)
 
-The case produced a native `.blend`, an editable walkthrough project, an 85-second video, and an initial USDZ export. The repository currently publishes the code, tutorial, and previews. Large model and video files will follow through Git LFS; see the [artifact list](docs/releases.en.md).
+The case produced a native `.blend`, an editable walkthrough project, an 85-second video, and an initial USDZ export. Code, tutorials, previews, models, and video are available. Large files are provided through Git LFS; see the [artifact list](docs/releases.en.md).
 
-The full original scan and panorama dataset stays local. The repository currently includes curated code, articles, previews, and artifact manifests. Code, prompts, and original documentation use the [MIT license](LICENSE). See [data and licensing](docs/data-and-license.en.md) for the scope of the case assets.
+The full original scan and panorama dataset stays local. The repository currently includes curated code, articles, previews, and public deliverables. Code, prompts, and original documentation use the [MIT license](LICENSE). See [data and licensing](docs/data-and-license.en.md) for the scope of the case assets.
 
 ## Development and contributions
 

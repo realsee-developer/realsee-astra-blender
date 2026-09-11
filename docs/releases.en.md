@@ -4,20 +4,20 @@
 
 ## Case files
 
-The repository currently publishes code, tutorials, and previews. The following four large deliverables have been prepared locally and will be provided through Git LFS later. Neither these files nor their LFS pointers are currently included in the repository.
+The following four public deliverables are available through Git LFS. Click a filename to download it from its GitHub file page, or follow the cloning instructions below.
 
 | File | Size | Purpose |
 |---|---:|---|
-| `reconstruction_native.blend` | 252 MB | Native space project with separate geometry, materials, packed textures, and a scan reference hidden by default |
-| `reconstruction_roaming.blend` | 252 MB | Walkthrough project with its camera route and keyframes |
-| `reconstruction_roaming.mp4` | 44 MB | An 85-second walkthrough at 24 fps, 1280×720 |
-| `reconstruction_physics_v1.usdz` | 560 MB | First exchange-file version with rigid bodies, collisions, and material settings |
+| [reconstruction_native.blend](../artifacts/reconstruction_native.blend) | 252 MB | Native space project with separate geometry, materials, packed textures, and a scan reference hidden by default |
+| [reconstruction_roaming.blend](../artifacts/reconstruction_roaming.blend) | 252 MB | Walkthrough project with its camera route and keyframes |
+| [reconstruction_roaming.mp4](../artifacts/reconstruction_roaming.mp4) | 44 MB | An 85-second walkthrough at 24 fps, 1280×720 |
+| [reconstruction_physics_v1.usdz](../artifacts/reconstruction_physics_v1.usdz) | 560 MB | First exchange-file version with rigid bodies, collisions, and material settings |
 
 The total is approximately 1.11 GB. File sizes and SHA256 hashes are listed in [manifest.json](../artifacts/manifest.json) and [SHA256SUMS](../artifacts/SHA256SUMS).
 
-## Downloading the large files once published
+## Downloading models and video
 
-After the models and video are published, install [Git LFS](https://git-lfs.com/), clone the repository, and run these commands from its root:
+Install [Git LFS](https://git-lfs.com/), clone the repository, and run these commands from its root:
 
 ```sh
 git lfs install --local
@@ -36,7 +36,7 @@ The public models include the remaining packed on-site textures and the hidden s
 
 `.gitattributes` configures LFS for `.blend`, `.usdz`, and `.mp4` files under `artifacts/`. `.gitignore` allows only reviewed filenames. Update the allowlist and checksums when adding a deliverable.
 
-When ready to publish the large files, first allow the four filenames above in `.gitignore`, place the public copies in the directory, then stage and check them:
+When updating a deliverable, place the reviewed public copy in `artifacts/`, update `manifest.json` and `SHA256SUMS`, then stage and check it:
 
 ```sh
 git add .gitattributes artifacts/

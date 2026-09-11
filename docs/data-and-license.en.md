@@ -10,7 +10,7 @@ This repository shares methods, prompts, and code for reconstructing a space wit
 | --- | --- |
 | Prompts, code, and original documentation | Published in Git under MIT. |
 | Case previews in `docs/assets/` | Authorized for public sharing so readers can see the modeling results; see the material licensing scope below. |
-| Final models and video | Public copies have been prepared locally. Large files will be provided through Git LFS later; see [case files](releases.en.md) for current availability. |
+| Final models and video | The reviewed public copies are available through Git LFS; see [case files](releases.en.md) for files and download instructions. |
 | `data/` | Your own Realsee exports; not committed to Git. |
 | `output/` and `research/` | Local models, intermediate files, analysis records, and logs; not committed to Git. Public content is selected and prepared separately. |
 | Virtual environments, caches, and credential files | Kept locally and not committed to Git. |
