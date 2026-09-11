@@ -22,3 +22,5 @@ To try the workflow, place your CAD, point clouds, panoramas, and scan models in
 MIT applies to this project's code, prompts, and original documentation text. It does not automatically change the rights to original Realsee exports, photographic textures, third-party generated assets, or other third-party content. The previews and final models authorized for public sharing can serve as case demonstrations and learning references. Use of their materials is governed by the respective sources and the [case asset notice](../artifacts/NOTICE.txt); the entire model package is not labeled MIT.
 
 The writing process drew on [ComposioHQ's Content Research Writer](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/content-research-writer/SKILL.md). This repository links to the source without redistributing the full skill text. External tools and dependencies retain their own licenses.
+
+The browser GLB is derived solely from the reviewed public USDZ and follows the same asset notice. The website includes Three.js under MIT (license distributed at `vendor/three/LICENSE`) and the Draco decoder under the [Apache 2.0 license](../site/DRACO_LICENSE.txt).

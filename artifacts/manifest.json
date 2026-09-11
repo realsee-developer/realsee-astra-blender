@@ -27,6 +27,14 @@
       "sha256": "c5c44bd5aab0e8ce1631ffc6c4308d5af3c12e9d2a58cee49ad0aabd6da60561",
       "original_local_sha256": "871c406c85f593890fa8fdfcfbf05622ba65d712ed851e0336cdb624830c11e9",
       "changes": "QR-bearing textures and their shader references removed; geometry and physics preserved"
+    },
+    {
+      "file": "reconstruction_web.glb",
+      "bytes": 17161920,
+      "sha256": "804f4a1849e468d8fdcb35edaafdd1ca9638e1f8612b6debec06b6e095713ccf",
+      "source_file": "reconstruction_physics_v1.usdz",
+      "source_sha256": "c5c44bd5aab0e8ce1631ffc6c4308d5af3c12e9d2a58cee49ad0aabd6da60561",
+      "changes": "Browser-only derivative of the public USDZ; ceilings and grid roofs hidden, dense detail reduced, meshes combined, textures resized and Draco-compressed. Original Blender projects and USDZ unchanged."
     }
   ],
   "blender_copy_verification": "Independent process reopen; geometry, hierarchy and animation match originals. Only affected image materials and packed image set changed for public QR redaction.",

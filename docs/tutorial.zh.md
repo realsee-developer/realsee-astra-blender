@@ -16,7 +16,7 @@
 
 ## 1. 从 Realsee 下载附加产物
 
-打开 Realsee 一站式制作平台，进入自己的 VR 项目，在预览页面上方找到“下载中心”，选择需要的产物，生成后下载。[官方模型下载说明](https://www.realsee.com/book/xBxQ8gg0/e0Ry7TVN)
+打开 Realsee 一站式制作平台，进入自己的 VR 项目，在预览页面上方找到“下载中心”，选择需要的产物，生成后下载。[官方模型下载说明](https://www.realsee.com/book/xBxQ8gg0/e0Ry7TVN?utm_source=realsee-astra-blender&utm_medium=referral&utm_campaign=editable-space&utm_content=zh-tutorial-model)
 
 优先找这几类资料：
 
@@ -27,7 +27,7 @@
 | 全景图 | 看清空间长什么样，参考材质、灯光和区域连接 |
 | CAD 或平面图 | 理解布局、墙线和门窗位置 |
 
-点云与 CAD 也有对应的下载入口，具体可以参考如视的[点云说明](https://www.realsee.com/book/xBxQ8gg0/Kd1ydw7h)和 [CAD 说明](https://www.realsee.com/book/xBxQ8gg0/OJ4NOt0O)。如果还有 RAW、六视图或视频，也可以一起放进资料文件夹，留给 Astra 按需查看。
+点云与 CAD 也有对应的下载入口，具体可以参考如视的[点云说明](https://www.realsee.com/book/xBxQ8gg0/Kd1ydw7h?utm_source=realsee-astra-blender&utm_medium=referral&utm_campaign=editable-space&utm_content=zh-tutorial-point-cloud)和 [CAD 说明](https://www.realsee.com/book/xBxQ8gg0/OJ4NOt0O?utm_source=realsee-astra-blender&utm_medium=referral&utm_campaign=editable-space&utm_content=zh-tutorial-cad)。如果还有 RAW、六视图或视频，也可以一起放进资料文件夹，留给 Astra 按需查看。
 
 这些文件各有用途：模型让它看到整体，照片补充外观，点云和图纸帮助它把空间搭得更准。手头有哪些就先整理哪些，让 Astra 看过后告诉你还缺什么。
 
@@ -138,3 +138,5 @@
 这个项目最后完成了[可编辑的原生工程](releases.md#案例文件)，也制作了一段 [85 秒的漫游视频](releases.md#案例文件)。空间从原来的扫描资料，变成了可以继续调整、渲染和展示的 Blender 场景。代码、预览图、模型与视频都已公开，下载方式见案例文件说明。
 
 如果你手里已经有一个 Realsee 项目，可以从下载附加产物开始，把资料放进文件夹，让 Astra 先搭出第一版空间。打开看看，再告诉它下一步想改什么。
+
+也欢迎带着你的空间模型来 [Discord 交流](https://discord.gg/2BcZpmdZj)，分享效果，一起聊聊建模中遇到的问题。

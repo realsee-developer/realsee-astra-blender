@@ -4,7 +4,7 @@
 
 ## Case files
 
-The following four public deliverables are available through Git LFS. Click a filename to download it from its GitHub file page, or follow the cloning instructions below.
+The following public deliverables are available through Git LFS. Click a filename to download it from its GitHub file page, or follow the cloning instructions below.
 
 | File | Size | Purpose |
 |---|---:|---|
@@ -12,8 +12,11 @@ The following four public deliverables are available through Git LFS. Click a fi
 | [reconstruction_roaming.blend](../artifacts/reconstruction_roaming.blend) | 252 MB | Walkthrough project with its camera route and keyframes |
 | [reconstruction_roaming.mp4](../artifacts/reconstruction_roaming.mp4) | 44 MB | An 85-second walkthrough at 24 fps, 1280×720 |
 | [reconstruction_physics_v1.usdz](../artifacts/reconstruction_physics_v1.usdz) | 560 MB | First exchange-file version with rigid bodies, collisions, and material settings |
+| [reconstruction_web.glb](../artifacts/reconstruction_web.glb) | 17.2 MB | Lightweight browser preview derived from the public USDZ, with ceilings hidden and geometry/textures compressed |
 
-The total is approximately 1.11 GB. File sizes and SHA256 hashes are listed in [manifest.json](../artifacts/manifest.json) and [SHA256SUMS](../artifacts/SHA256SUMS).
+The homepage embeds the original tour, an interactive 3D model, and the walkthrough video. The GLB is a visual preview; use the Blender projects for component editing and the full USDZ for its authored physics data.
+
+The total is approximately 1.13 GB. File sizes and SHA256 hashes are listed in [manifest.json](../artifacts/manifest.json) and [SHA256SUMS](../artifacts/SHA256SUMS).
 
 ## Downloading models and video
 
@@ -34,7 +37,7 @@ The public models include the remaining packed on-site textures and the hidden s
 
 ## Updating files as a maintainer
 
-`.gitattributes` configures LFS for `.blend`, `.usdz`, and `.mp4` files under `artifacts/`. `.gitignore` allows only reviewed filenames. Update the allowlist and checksums when adding a deliverable.
+`.gitattributes` configures LFS for `.blend`, `.usdz`, `.mp4`, and `.glb` files under `artifacts/`. `.gitignore` allows only reviewed filenames. Update the allowlist and checksums when adding a deliverable.
 
 When updating a deliverable, place the reviewed public copy in `artifacts/`, update `manifest.json` and `SHA256SUMS`, then stage and check it:
 
@@ -44,4 +47,4 @@ git lfs ls-files
 python3 tools/check_public_tree.py
 ```
 
-The checker confirms that the index contains LFS pointers and verifies the size and SHA256 of the working-tree files. CI can check the source with pointers only, without downloading all the models. Once verified, commit and push when ready; the Git LFS pre-push hook uploads the corresponding large files. See the [official GitHub setup guide](https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage).
+The checker confirms that the index contains LFS pointers and verifies the size and SHA256 of the working-tree files. Source checks work with pointers only. The website build fetches just the web GLB and MP4, leaving the large Blender projects and USDZ out of its download. Once verified, commit and push when ready; the Git LFS pre-push hook uploads the corresponding large files. See the [official GitHub setup guide](https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage).

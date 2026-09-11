@@ -16,7 +16,7 @@ To see the original space, open the [official Realsee online tour](https://reals
 
 ## 1. Download the additional outputs from Realsee
 
-Open your VR project in the Realsee production platform. Find the Download Center above the preview, choose the outputs you need, then generate and download them. See the [official model download guide](https://www.realsee.com/book/xBxQ8gg0/e0Ry7TVN).
+Open your VR project in the Realsee workspace. Choose Add-ons, select Model and the formats you need, then submit the task and download the result. See the [official model download guide](https://www.realsee.ai/blogs/help-center/download-model-add-ons?utm_source=realsee-astra-blender&utm_medium=referral&utm_campaign=editable-space&utm_content=en-tutorial-model).
 
 Start with these types of files:
 
@@ -27,7 +27,7 @@ Start with these types of files:
 | Panoramas | Inspect the appearance, materials, lighting, and connections between areas |
 | CAD or floor plans | Understand the layout, wall lines, and door and window locations |
 
-Point clouds and CAD have their own download options; see Realsee's [point cloud guide](https://www.realsee.com/book/xBxQ8gg0/Kd1ydw7h) and [CAD guide](https://www.realsee.com/book/xBxQ8gg0/OJ4NOt0O). If you also have RAW images, cube-map faces, or video, add those to the input folder for Astra to consult when useful.
+Point clouds and CAD have their own download options; see Realsee's [point cloud guide](https://www.realsee.ai/blogs/help-center/download-point-cloud-add-ons?utm_source=realsee-astra-blender&utm_medium=referral&utm_campaign=editable-space&utm_content=en-tutorial-point-cloud) and [CAD guide](https://www.realsee.ai/blogs/help-center/download-cad-file-add-ons-2?utm_source=realsee-astra-blender&utm_medium=referral&utm_campaign=editable-space&utm_content=en-tutorial-cad). If you also have RAW images, cube-map faces, or video, add those to the input folder for Astra to consult when useful.
 
 Each source contributes something different. The model shows the whole space, photographs supply its appearance, and point clouds and drawings help place the structure accurately. Organize what you have first, then let Astra inspect it and explain what else would help.
 
@@ -144,3 +144,5 @@ Keep the camera route in the Blender project so I can adjust it later.
 This project produced an [editable native scene](releases.en.md#case-files) and an [85-second walkthrough video](releases.en.md#case-files). The original scan inputs became a Blender scene that could be edited, rendered, and presented. Code, previews, models, and video are available; see the case files page for download instructions.
 
 If you already have a Realsee project, start by downloading its additional outputs. Put the files in a folder and ask Astra to build the first version of the space. Open it, take a look, and tell it what you want to change next.
+
+Want to share your space model or compare notes? [Join our Discord](https://discord.gg/2BcZpmdZj) and show us what you are building.

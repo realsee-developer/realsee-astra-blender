@@ -25,6 +25,7 @@
 !/artifacts/reconstruction_roaming.blend
 !/artifacts/reconstruction_roaming.mp4
 !/artifacts/reconstruction_physics_v1.usdz
+!/artifacts/reconstruction_web.glb
 !/artifacts/manifest.json
 !/artifacts/SHA256SUMS
 !/artifacts/NOTICE.txt
@@ -96,6 +97,7 @@
 
 # Never include local environments, credentials or generated caches.
 **/__pycache__/
+**/node_modules/
 *.py[cod]
 .DS_Store
 .env

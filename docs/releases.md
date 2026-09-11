@@ -4,7 +4,7 @@
 
 ## 案例文件
 
-以下四个公开成果已通过 Git LFS 提供。点击文件名打开 GitHub 文件页面下载，或按下方说明克隆仓库。
+以下公开成果已通过 Git LFS 提供。点击文件名打开 GitHub 文件页面下载，或按下方说明克隆仓库。
 
 | 文件 | 大小 | 用途 |
 |---|---:|---|
@@ -12,8 +12,11 @@
 | [reconstruction_roaming.blend](../artifacts/reconstruction_roaming.blend) | 252 MB | 保留相机路线与关键帧的漫游工程 |
 | [reconstruction_roaming.mp4](../artifacts/reconstruction_roaming.mp4) | 44 MB | 85 秒、24 fps、1280×720 的空间漫游 |
 | [reconstruction_physics_v1.usdz](../artifacts/reconstruction_physics_v1.usdz) | 560 MB | 带刚体、碰撞和材质设置的交换文件首版 |
+| [reconstruction_web.glb](../artifacts/reconstruction_web.glb) | 17.2 MB | 从公开 USDZ 生成的轻量网页预览，隐藏顶面，压缩几何与贴图 |
 
-合计约 1.11 GB。文件大小和 SHA256 见 [manifest.json](../artifacts/manifest.json) 与 [SHA256SUMS](../artifacts/SHA256SUMS)。
+网页首页可直接浏览原始实景、旋转三维模型并播放漫游视频。GLB 只用于浏览展示；编辑组件请使用 Blender 工程，物理数据保留在完整 USDZ 中。
+
+合计约 1.13 GB。文件大小和 SHA256 见 [manifest.json](../artifacts/manifest.json) 与 [SHA256SUMS](../artifacts/SHA256SUMS)。
 
 ## 下载模型与视频
 
@@ -34,7 +37,7 @@ git lfs pull
 
 ## 维护者更新文件
 
-`.gitattributes` 已为 `artifacts/` 下的 `.blend`、`.usdz` 和 `.mp4` 配置 LFS。`.gitignore` 只放行已审查的文件名；新增成果时同步更新这份清单和校验信息。
+`.gitattributes` 已为 `artifacts/` 下的 `.blend`、`.usdz`、`.mp4` 和 `.glb` 配置 LFS。`.gitignore` 只放行已审查的文件名；新增成果时同步更新这份清单和校验信息。
 
 更新时，将经过审查的公开副本放入 `artifacts/`，同步更新 `manifest.json` 与 `SHA256SUMS`，再暂存并检查：
 
@@ -44,4 +47,4 @@ git lfs ls-files
 python3 tools/check_public_tree.py
 ```
 
-检查器会确认暂存区保存的是 LFS 指针，并核对工作区实体的大小与 SHA256。CI 只检出指针即可检查源码，不需要下载全部模型。确认后再自行提交和推送；Git LFS 的 pre-push hook 会上传相应的大文件。配置方式见 [GitHub 官方指南](https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage)。
+检查器会确认暂存区保存的是 LFS 指针，并核对工作区实体的大小与 SHA256。源码检查支持只检出指针；网站构建只拉取网页 GLB 与 MP4，不下载大型 Blender 工程和 USDZ。确认后再自行提交和推送；Git LFS 的 pre-push hook 会上传相应的大文件。配置方式见 [GitHub 官方指南](https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage)。
