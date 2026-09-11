@@ -21,7 +21,7 @@ TOUR = "https://realsee.ai/O3eeL2R3"
 LANGUAGES = ("zh", "en")
 # key, Chinese source, English source, Chinese label, English label
 DOCUMENTS = (
-    ("overview", "README.md", "README.en.md", "项目说明", "Project overview"),
+    ("overview", "README.zh-CN.md", "README.md", "项目说明", "Project overview"),
     ("tutorial", "docs/tutorial.zh.md", "docs/tutorial.en.md", "图文教程", "Tutorial"),
     ("quickstart", "prompts/quickstart.zh.md", "prompts/quickstart.en.md", "快速提示词", "Quickstart prompt"),
     ("environment", "docs/environment.md", "docs/environment.en.md", "环境准备", "Environment"),
@@ -216,7 +216,7 @@ def build_home(lang):
 def render_markdown(source, page, embedded):
     text = (ROOT / source).read_text(encoding="utf-8")
     # The site header switches to the equivalent page in the other language.
-    text = re.sub(r"^(?:简体中文 \| \[English\].*|\[简体中文\].* \| English)\n", "", text, flags=re.M)
+    text = re.sub(r"^(?:简体中文 \| \[English\].*|\[简体中文\].* \| English|English \| \[简体中文\].*)\n", "", text, flags=re.M)
     if embedded:
         text = re.sub(r"\A# .+\n", "", text, count=1)
     parser = markdown.Markdown(extensions=["fenced_code", "tables", "toc", LinksExtension(source, page)],

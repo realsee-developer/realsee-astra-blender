@@ -2,7 +2,7 @@
 
 - Keep the main tutorial focused on using Realsee exports with a local AI agent and Blender. Space modeling comes before furniture and small props.
 - Resolve project paths from the repository root. Discover Blender through PATH or an explicit executable argument.
-- Start with `README.md`, `prompts/quickstart.zh.md`, and `docs/code-map.md`.
+- Start with `README.md`, `prompts/quickstart.en.md`, and `docs/code-map.en.md`.
 - `tools/` contains the standalone preparation helpers. `scripts/` is curated case-study code with scene-specific inputs and historical output dependencies; read its navigation before executing anything.
 - Do not run all case scripts or import them as a test suite. Some operate on a loaded Blender scene or write output at module load time.
 - Preserve original input data and existing models. Use a separate output copy for experiments and edit tests.
