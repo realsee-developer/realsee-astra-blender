@@ -20,7 +20,11 @@
 !/.github/
 !/artifacts/
 /artifacts/*
-# Model and video uploads are deferred; keep their local copies ignored.
+# Publish only the reviewed public model and video copies.
+!/artifacts/reconstruction_native.blend
+!/artifacts/reconstruction_roaming.blend
+!/artifacts/reconstruction_roaming.mp4
+!/artifacts/reconstruction_physics_v1.usdz
 !/artifacts/manifest.json
 !/artifacts/SHA256SUMS
 !/artifacts/NOTICE.txt

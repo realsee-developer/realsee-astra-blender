@@ -138,7 +138,7 @@ def build_home(lang):
         "compare_body": "打开 Realsee 官方在线实景，无需下载任何资料就能查看原来的空间。把它与 Blender 预览放在一起，看看房间连接、材质和灯光，再告诉 Astra 下一步想改什么。" if zh else "Open the official Realsee tour to see the original space without downloading the exports. Compare it with the Blender previews, check the room connections, materials, and lighting, then tell Astra what to adjust.",
         "compare_alt": "走廊现场照片与 Blender 渲染对比，每组左侧为现场、右侧为渲染" if zh else "Corridor comparison: source photographs on the left, Blender renders on the right in each pair",
         "resources": "带上这些，开始自己的项目" if zh else "Everything you need to get started",
-        "availability": "代码、教程和预览图已公开；模型与漫游视频稍后提供。" if zh else "Code, tutorials, and previews are available now. Models and the walkthrough video will follow.",
+        "availability": "代码、教程、模型和漫游视频均已公开，可以下载并在自己的项目中探索。" if zh else "Code, tutorials, models, and the walkthrough video are available to download and explore.",
     }
     steps = (
         ("整理 Realsee 资料", "将下载的模型与贴图、点云、全景图或 CAD 放进 data/，保留原来的文件夹结构。"),

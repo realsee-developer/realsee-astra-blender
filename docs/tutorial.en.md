@@ -141,6 +141,6 @@ Create a walkthrough starting at the entrance and passing through the main areas
 Keep the camera route in the Blender project so I can adjust it later.
 ```
 
-This project produced an [editable native scene](releases.en.md#case-files) and an [85-second walkthrough video](releases.en.md#case-files). The original scan inputs became a Blender scene that could be edited, rendered, and presented. The code and previews are available now; the large model and video files will be provided later.
+This project produced an [editable native scene](releases.en.md#case-files) and an [85-second walkthrough video](releases.en.md#case-files). The original scan inputs became a Blender scene that could be edited, rendered, and presented. Code, previews, models, and video are available; see the case files page for download instructions.
 
 If you already have a Realsee project, start by downloading its additional outputs. Put the files in a folder and ask Astra to build the first version of the space. Open it, take a look, and tell it what you want to change next.
