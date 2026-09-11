@@ -1,5 +1,6 @@
 """Build the bilingual Pages site from reviewed Markdown and three previews."""
 from html import escape
+import hashlib
 from pathlib import Path
 import posixpath
 import re
@@ -12,6 +13,7 @@ from markdown.extensions.toc import slugify_unicode
 from markdown.treeprocessors import Treeprocessor
 
 ROOT = Path(__file__).resolve().parents[1]
+STYLE_VERSION = hashlib.sha256((ROOT / "site/style.css").read_bytes()).hexdigest()[:12]
 OUTPUT = ROOT / "output" / "site"
 REPO = "https://github.com/realsee-developer/realsee-astra-blender"
 TOUR = "https://realsee.ai/O3eeL2R3"
@@ -95,7 +97,7 @@ def frame(lang, page, title, body, counterpart, description, is_home=False):
   <title>{escape(title)} · Realsee × Astra × Blender</title>
   <meta name="description" content="{escape(description, quote=True)}">
   <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="{url('assets/style.css')}">
+  <link rel="stylesheet" href="{url('assets/style.css')}?v={STYLE_VERSION}">
   <link rel="alternate" hreflang="{'en' if zh else 'zh-CN'}" href="{url(counterpart)}">
 </head>
 <body class="{'home' if is_home else 'docs'}">
