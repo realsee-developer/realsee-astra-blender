@@ -1,0 +1,35 @@
+{
+  "assets": [
+    {
+      "file": "reconstruction_native.blend",
+      "bytes": 251861324,
+      "sha256": "2979f191e53d946b81d08d84a2c1f4d748e45ec108d60df7caee95e4b94880aa",
+      "original_local_sha256": "7e9141c8d9b6b52a9aa769323fc057df7a5d8cc0c41822f49d0fe01112652ce1",
+      "changes": "personal path metadata normalized; QR-bearing images removed and affected materials neutralized; geometry and animation preserved"
+    },
+    {
+      "file": "reconstruction_roaming.blend",
+      "bytes": 252020395,
+      "sha256": "6c1bf7b4f9817590bc3967da0b3e65ebae7f418ea09ef042c509ae18801b1166",
+      "original_local_sha256": "edf19560f6dc696026333a6c1058de74fa157f083b5b80edf0bf9bf867c01a23",
+      "changes": "personal path metadata normalized; QR-bearing images removed and affected materials neutralized; geometry and animation preserved"
+    },
+    {
+      "file": "reconstruction_roaming.mp4",
+      "bytes": 44324375,
+      "sha256": "af7137c853ee046194efa70413239327f55088ddaff4e07934b0d0357da85526",
+      "original_local_sha256": "5e0ba9f35a61108f5522b9273c5e22041905e72e1026bc74e37a95f6b5321b8f",
+      "changes": "re-encoded with per-frame opaque masks over projected QR regions; duration, frame rate and resolution preserved"
+    },
+    {
+      "file": "reconstruction_physics_v1.usdz",
+      "bytes": 560179133,
+      "sha256": "c5c44bd5aab0e8ce1631ffc6c4308d5af3c12e9d2a58cee49ad0aabd6da60561",
+      "original_local_sha256": "871c406c85f593890fa8fdfcfbf05622ba65d712ed851e0336cdb624830c11e9",
+      "changes": "QR-bearing textures and their shader references removed; geometry and physics preserved"
+    }
+  ],
+  "blender_copy_verification": "Independent process reopen; geometry, hierarchy and animation match originals. Only affected image materials and packed image set changed for public QR redaction.",
+  "privacy_check": "Second source/metadata/media audit completed; identified QR images removed from models, preview replaced, video masked. Original local deliverables are excluded from Git.",
+  "license_note": "See NOTICE.txt; code MIT does not relicense third-party scene content."
+}
