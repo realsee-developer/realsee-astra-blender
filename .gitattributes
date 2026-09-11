@@ -9,3 +9,4 @@
 artifacts/*.blend filter=lfs diff=lfs merge=lfs -text
 artifacts/*.usdz filter=lfs diff=lfs merge=lfs -text
 artifacts/*.mp4 filter=lfs diff=lfs merge=lfs -text
+artifacts/*.glb filter=lfs diff=lfs merge=lfs -text
