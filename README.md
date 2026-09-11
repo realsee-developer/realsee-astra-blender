@@ -1,12 +1,14 @@
 # Realsee × GPT-6 Astra × Blender
 
+简体中文 | [English](README.en.md)
+
+[在线阅读网站](https://realsee-developer.github.io/realsee-astra-blender/) · [Realsee 原始空间](https://realsee.ai/O3eeL2R3)
+
 用 Realsee 的附加产物作为参考，让 GPT-6 Astra 调用本地 Blender，建立可以继续编辑的三维空间。
 
 这里整理了一次实际项目的提示词、上手教程、空间建模代码和成果预览。重点是墙、地面、顶面、门窗和区域连接，家具与小物件作为补充。
 
 ![空间重建效果](docs/assets/overview.jpg)
-
-*A practical reference for editable space reconstruction with Realsee exports, a local AI agent, and Blender. Chinese tutorial, reusable prompts, and selected case-study code.*
 
 ## 从这里开始
 

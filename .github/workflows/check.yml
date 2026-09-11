@@ -1,5 +1,5 @@
 name: Reference checks
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
 jobs:
@@ -14,3 +14,36 @@ jobs:
         run: python3 -m unittest discover -s tests -v
       - name: Check public files and links
         run: python3 tools/check_public_tree.py
+      - name: Install website dependency
+        run: |
+          python3 -m venv .venv-site
+          .venv-site/bin/python -m pip install -r requirements-site.txt
+      - name: Build and check bilingual website
+        run: |
+          .venv-site/bin/python tools/build_site.py
+          python3 tools/check_site.py
+      - name: Upload website
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: output/site
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

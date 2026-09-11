@@ -1,5 +1,7 @@
 # 环境说明
 
+简体中文 | [English](environment.en.md)
+
 ## 快速开始
 
 准备工具使用 Python 3.10+ 标准库。Blender 通过 PATH 中的 `blender` 查找，也可使用 `--blender` 指定可执行文件；路径中的符号链接会解析到实际程序，帮助 Blender 找到自身资源。
