@@ -2,7 +2,7 @@
 
 [简体中文](README.md) | English
 
-[Read the website](https://realsee-developer.github.io/realsee-astra-blender/en/) · [Original Realsee space](https://realsee.ai/O3eeL2R3)
+[Read the website](https://realsee-developer.github.io/realsee-astra-blender/) · [Original Realsee space](https://realsee.ai/O3eeL2R3)
 
 Use Realsee exports as reference and let GPT-6 Astra run Blender locally to build a 3D space you can keep editing.
 

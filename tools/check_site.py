@@ -12,6 +12,7 @@ class Page(HTMLParser):
         self.ids = set()
         self.links = []
         self.language = None
+        self.redirect = None
         self.switches = []
         self.headings = 0
         self.errors = []
@@ -25,6 +26,8 @@ class Page(HTMLParser):
             self.ids.add(attrs["id"])
         if tag == "html":
             self.language = attrs.get("lang")
+        if tag == "meta" and attrs.get("http-equiv", "").lower() == "refresh":
+            self.redirect = attrs.get("content")
         if tag == "h1":
             self.headings += 1
         if tag == "img" and not attrs.get("alt"):
@@ -38,8 +41,8 @@ class Page(HTMLParser):
 
 def main():
     pages = {path: Page(path.read_text(encoding="utf-8")) for path in ROOT.rglob("*.html")}
-    if len(pages) != 20:
-        raise SystemExit(f"Expected 20 bilingual pages; found {len(pages)}. Run tools/build_site.py first.")
+    if len(pages) != 21:
+        raise SystemExit(f"Expected 20 bilingual pages and 1 redirect; found {len(pages)}. Run tools/build_site.py first.")
     errors = []
     assets = {"assets/style.css", "assets/overview.jpg", "assets/plan.png", "assets/source-comparison.jpg"}
     for path in ROOT.rglob("*"):
@@ -49,10 +52,13 @@ def main():
     for path, page in pages.items():
         name = path.relative_to(ROOT).as_posix()
         errors.extend(f"{name}: {error}" for error in page.errors)
-        expected_language = "en" if name.startswith("en/") else "zh-CN"
+        expected_language = "zh-CN" if name.startswith("zh/") else "en"
         if page.language != expected_language or page.headings != 1:
             errors.append(f"{name}: incorrect language or H1 count")
-        if len(page.switches) != 1:
+        if page.redirect is not None:
+            if name != "en/index.html" or page.redirect != "0; url=../index.html":
+                errors.append(f"{name}: unexpected redirect")
+        elif len(page.switches) != 1:
             errors.append(f"{name}: expected one language switch")
         else:
             other_path = (path.parent / page.switches[0]).resolve()

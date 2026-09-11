@@ -39,7 +39,7 @@ def relative(target, page):
 
 
 def home(lang):
-    return "index.html" if lang == "zh" else "en/index.html"
+    return "index.html" if lang == "en" else "zh/index.html"
 
 
 class SiteLinks(Treeprocessor):
@@ -207,7 +207,20 @@ def main():
         for doc in DOCUMENTS:
             source = doc[LANGUAGES.index(lang) + 1]
             (OUTPUT / ROUTES[source]).write_text(build_document(doc, lang), encoding="utf-8")
-    print(f"Built {2 + 2 * len(DOCUMENTS)} HTML pages and 4 assets in output/site/")
+    # Keep the previously published English homepage URL working.
+    (OUTPUT / "en/index.html").write_text('''<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="0; url=../index.html">
+  <link rel="canonical" href="../index.html">
+  <title>Realsee × Astra × Blender</title>
+</head>
+<body><h1>Realsee × Astra × Blender</h1><p><a href="../index.html">Continue to the English homepage</a></p></body>
+</html>
+''', encoding="utf-8")
+    print(f"Built {2 + 2 * len(DOCUMENTS)} content pages, 1 redirect, and 4 assets in output/site/")
 
 
 if __name__ == "__main__":
