@@ -1,5 +1,7 @@
 # 数据与许可
 
+简体中文 | [English](data-and-license.en.md)
+
 这个仓库分享用 Realsee 附加产物协同 Astra、Blender 重建空间的方法、提示词和代码。代码、提示词及原创文档采用 [MIT 许可证](../LICENSE)。
 
 ## 文件放在哪里

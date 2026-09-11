@@ -3,10 +3,14 @@
 !/.gitignore
 !/.gitattributes
 !/README.md
+!/README.en.md
 !/LICENSE
 !/CONTRIBUTING.md
+!/CONTRIBUTING.en.md
 !/AGENTS.md
 !/requirements-analysis.txt
+!/requirements-site.txt
+!/site/
 !/ASTRA_BLENDER_GOAL_PROMPT.txt
 !/ASTRA_BLENDER_GOAL_PROMPT.zh.txt
 !/docs/
@@ -23,6 +27,7 @@
 !/scripts/
 /scripts/*
 !/scripts/README.md
+!/scripts/README.en.md
 !/scripts/author_usdz_v1_physics.py
 !/scripts/build_bar.py
 !/scripts/build_corridor.py
