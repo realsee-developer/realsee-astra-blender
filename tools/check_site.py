@@ -67,8 +67,8 @@ class Page(HTMLParser):
 
 def main():
     pages = {path: Page(path.read_text(encoding="utf-8")) for path in ROOT.rglob("*.html")}
-    if len(pages) != 21:
-        raise SystemExit(f"Expected 20 bilingual pages and 1 redirect; found {len(pages)}. Run tools/build_site.py first.")
+    if len(pages) != 23:
+        raise SystemExit(f"Expected 22 bilingual pages and 1 redirect; found {len(pages)}. Run tools/build_site.py first.")
     errors = []
     assets = {"assets/style.css", "assets/overview.jpg", "assets/plan.png", "assets/source-comparison.jpg",
               "assets/scene-viewer.js", "assets/DRACO_LICENSE.txt", "assets/reconstruction_web.glb", "assets/reconstruction_roaming.mp4"}
@@ -94,6 +94,12 @@ def main():
             errors.append(f"{name}: incorrect language or H1 count")
         lang = "zh" if expected_language == "zh-CN" else "en"
         if name in {"index.html", "zh/index.html"}:
+            source_page = ROOT / lang / "source-data.html"
+            if source_page not in pages or not any(
+                    not urlsplit(link).scheme and not urlsplit(link).netloc
+                    and (path.parent / unquote(urlsplit(link).path)).resolve() == source_page
+                    for link in page.links):
+                errors.append(f"{name}: missing the local source-data download guide")
             if not {"tutorial", "original-space", "model", "walkthrough"} <= page.ids:
                 errors.append(f"{name}: missing an embedded experience section")
             if len(page.iframes) != 1 or not page.iframes[0].get("title") or urlsplit(page.iframes[0].get("src", "")).hostname != "realsee.ai":

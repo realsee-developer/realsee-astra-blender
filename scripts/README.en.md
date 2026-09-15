@@ -4,7 +4,7 @@
 
 This selection contains 60 Python scripts and one walkthrough route from the project, showing how an AI agent turns scan data into a native Blender scene. Start with the spatial structure, then explore materials, objects, and exports as needed. The scripts remain in their original locations so their imports are easy to follow.
 
-These are **case-study scripts for one real space**. CAD entities, scan positions, coordinates, and object names have already been established from its source data. For your own Realsee project, have the agent analyze the inputs again and adapt the model. The selection includes local Python import dependencies, but not private scans, photographs, measurement JSON, textures, or historical `.blend` checkpoints. It is not a one-command replay of the final project.
+These are **case-study scripts for one real space**. CAD entities, scan positions, coordinates, and object names have already been established from its source data. For your own Realsee project, have the agent analyze the inputs again and adapt the model. The [original scans, photographs, and source textures](../data/README.md) are available through Git LFS. The script selection includes local Python import dependencies; historical measurement JSON, prepared material assets, and `.blend` checkpoints remain local. It is not a one-command replay of the final project.
 
 ## 1. Spatial source data
 

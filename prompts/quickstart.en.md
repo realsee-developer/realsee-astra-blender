@@ -2,7 +2,14 @@
 
 [简体中文](quickstart.zh.md) | English
 
-Put your Realsee exports in the project's `data/` folder. Open the project in an Astra session that can access local files and run Blender, then send the prompt below. CAD, point clouds, panoramas, and textured scans serve different purposes; keep the downloaded folder structure intact.
+Start with the [provided case inputs](../data/README.md), or put your own Realsee exports in a separate project's `data/` folder. For the provided case, install Git LFS and run these commands from the cloned repository root before sending the prompt:
+
+```sh
+git lfs install --local
+git lfs pull --include='data/**' --exclude=''
+```
+
+Fetch the actual files first: LFS pointers are small text files, not modeling inputs. Open the project in an Astra session that can access local files and run Blender, then send the prompt below. CAD, point clouds, panoramas, and textured scans serve different purposes; keep the downloaded folder structure intact.
 
 ```text
 Use the current project directory as PROJECT_ROOT. Inspect the Realsee exports in data/ and discover the Blender executable installed locally.

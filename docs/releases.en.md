@@ -2,6 +2,8 @@
 
 [简体中文](releases.md) | English
 
+The [original case inputs](../data/README.md) are also available through Git LFS: 396 files, about 5.66 GiB. Use them to start your own reconstruction. The files below are the reconstructed models and video; their downloads are separate from the source data.
+
 ## Case files
 
 The following public deliverables are available through Git LFS. Click a filename to download it from its GitHub file page, or follow the cloning instructions below.
@@ -20,12 +22,16 @@ The total is approximately 1.13 GB. File sizes and SHA256 hashes are listed in [
 
 ## Downloading models and video
 
-Install [Git LFS](https://git-lfs.com/), clone the repository, and run these commands from its root:
+Install [Git LFS](https://git-lfs.com/), then download the reconstructed models and video:
 
 ```sh
+GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/realsee-developer/realsee-astra-blender.git
+cd realsee-astra-blender
 git lfs install --local
-git lfs pull
+git lfs pull --include='artifacts/**' --exclude=''
 ```
+
+For an existing checkout, run the last two commands from the repository root. To download modeling inputs, follow the [source-data guide](../data/README.md).
 
 Then open `artifacts/reconstruction_native.blend` directly in Blender. Save your own edited versions under the local `output/` directory. USDZ dynamics require software that supports USD Physics; ordinary model viewers are mainly for viewing the geometry.
 
@@ -33,7 +39,7 @@ If a model in a downloaded ZIP contains only a few lines of text, it is an LFS p
 
 On-site QR codes have been removed from the public models. Paper and packaging retain their geometry, with the affected materials changed to solid colors. Scan textures containing QR codes have also been removed, while the hidden scan reference retains its geometry. The corresponding areas in the video are covered with local masks.
 
-The public models include the remaining packed on-site textures and the hidden scan reference. The full point-cloud, panorama, RAW, and other downloaded datasets in the original `data/` directory are not included in the repository. See [data and licensing](data-and-license.en.md) for the scope of the materials.
+The public models include the remaining packed on-site textures and the hidden scan reference. The [original point clouds, panoramas, RAW, and other exports](../data/README.md) are shared as-is in `data/`, including on-site QR codes. The models and video above retain their existing redactions. See [data and licensing](data-and-license.en.md) for the scope of the materials.
 
 ## Updating files as a maintainer
 
