@@ -2,7 +2,14 @@
 
 简体中文 | [English](quickstart.en.md)
 
-先把自己的 Realsee 附加产物放进项目的 `data/`，在能访问本地文件和调用 Blender 的 Astra 会话中选中这个项目，再发送下面这段话。CAD、点云、全景图和带贴图的扫描模型各有用途，保留下载时的目录结构即可。
+可以使用[本次案例原始数据](../data/README.zh-CN.md)，也可以把自己的 Realsee 附加产物放进另一个项目的 `data/`。使用本次案例时，先安装 Git LFS，在克隆好的仓库根目录运行：
+
+```sh
+git lfs install --local
+git lfs pull --include='data/**' --exclude=''
+```
+
+先获取实际文件再开始建模：LFS 指针只是小文本文件，不能作为输入。在能访问本地文件和调用 Blender 的 Astra 会话中选中项目，再发送下面这段话。CAD、点云、全景图和带贴图的扫描模型各有用途，保留下载时的目录结构即可。
 
 ```text
 请使用当前项目目录作为 PROJECT_ROOT，检查 data/ 中的 Realsee 附加产物，并发现本地安装的 Blender。

@@ -91,7 +91,7 @@ button:focus-visible, [tabindex]:focus-visible { outline: 3px solid var(--accent
 .preview p { color: var(--muted); font-size: 1rem; }
 .preview .eyebrow { color: var(--link); font-size: 13px; }
 .preview .actions { margin-top: 1.8rem; }
-.resource-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+.resource-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
 .resource { display: block; min-width: 0; padding: 1.7rem 0 0; border-top: 1px solid var(--line); color: var(--ink); text-decoration: none; transition: border-color .15s ease; }
 .resource:hover { border-color: var(--accent); color: var(--link); }
 .resource > span { display: block; margin-bottom: 1.4rem; }

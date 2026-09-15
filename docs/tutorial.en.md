@@ -14,7 +14,22 @@ I tried this with a project containing a corridor, a photography room, a bar, a 
 
 To see the original space, open the [official Realsee online tour](https://realsee.ai/O3eeL2R3). You can explore it without downloading any models or scan data and compare it with the Blender results in this article.
 
-## 1. Download the additional outputs from Realsee
+## 1. Prepare the Realsee inputs
+
+You can follow along with this case or model a space you have captured yourself.
+
+**Use this case.** The [original case inputs](../data/README.md) are available through Git LFS: 396 files, about 5.66 GiB, including models, textures, point clouds, panoramas, and CAD. Install [Git LFS](https://git-lfs.com/), then download the source data:
+
+```sh
+GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/realsee-developer/realsee-astra-blender.git
+cd realsee-astra-blender
+git lfs install --local
+git lfs pull --include='data/**' --exclude=''
+```
+
+The files will be in `data/`, ready for step 2. If you already cloned the repository, run the last two commands from its root. The [data guide](../data/README.md) also explains how to download a smaller starting set. Fetch the actual LFS files before modeling; the small text pointers in a source checkout are not usable inputs.
+
+**Use your own space.** Download its additional outputs from Realsee:
 
 Open your VR project in the Realsee workspace. Choose Add-ons, select Model and the formats you need, then submit the task and download the result. See the [official model download guide](https://www.realsee.ai/blogs/help-center/download-model-add-ons?utm_source=realsee-astra-blender&utm_medium=referral&utm_campaign=editable-space&utm_content=en-tutorial-model).
 
@@ -39,7 +54,7 @@ I used GPT-6 Astra in Codex alongside Blender installed on my computer. Astra ca
 
 That is what “having Astra run Blender” means here: it turns your request into modeling operations and executes them in your local Blender installation. You describe the task in ordinary language, open the project to see the result, and ask for changes along the way.
 
-Install Blender, create a project folder, put the downloaded files in `data/`, and open that project directory in Codex. The initial layout can be this simple:
+Install Blender and open the cloned repository in Codex. If you are using your own space, create a separate project folder and put its downloaded files in `data/`, keeping the provided case inputs intact. The initial layout can be this simple:
 
 ```text
 my-space-project/
@@ -143,6 +158,6 @@ Keep the camera route in the Blender project so I can adjust it later.
 
 This project produced an [editable native scene](releases.en.md#case-files) and an [85-second walkthrough video](releases.en.md#case-files). The original scan inputs became a Blender scene that could be edited, rendered, and presented. Code, previews, models, and video are available; see the case files page for download instructions.
 
-If you already have a Realsee project, start by downloading its additional outputs. Put the files in a folder and ask Astra to build the first version of the space. Open it, take a look, and tell it what you want to change next.
+Start with the [provided case inputs](../data/README.md) or the additional outputs from your own Realsee project, and ask Astra to build the first version of the space. Open it, take a look, and tell it what you want to change next.
 
 Want to share your space model or compare notes? [Join our Discord](https://discord.gg/2BcZpmdZj) and show us what you are building.

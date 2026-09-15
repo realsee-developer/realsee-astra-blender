@@ -24,6 +24,7 @@ DOCUMENTS = (
     ("overview", "README.zh-CN.md", "README.md", "项目说明", "Project overview"),
     ("tutorial", "docs/tutorial.zh.md", "docs/tutorial.en.md", "图文教程", "Tutorial"),
     ("quickstart", "prompts/quickstart.zh.md", "prompts/quickstart.en.md", "快速提示词", "Quickstart prompt"),
+    ("source-data", "data/README.zh-CN.md", "data/README.md", "原始数据", "Source data"),
     ("environment", "docs/environment.md", "docs/environment.en.md", "环境准备", "Environment"),
     ("code-map", "docs/code-map.md", "docs/code-map.en.md", "代码导读", "Code map"),
     ("scripts", "scripts/README.md", "scripts/README.en.md", "案例脚本", "Case scripts"),
@@ -128,6 +129,7 @@ def frame(lang, page, title, body, counterpart, description, is_home=False):
   <a class="brand" href="{url(home(lang))}">Realsee × Astra × Blender</a>
   <nav class="header-nav" aria-label="{'主导航' if zh else 'Main navigation'}">
     <a href="{start}#tutorial">{'教程' if zh else 'Tutorial'}</a>
+    <a href="{url(f'{lang}/source-data.html')}">{'原始数据' if zh else 'Source data'}</a>
     <a href="{start}#original-space">{'原始空间' if zh else 'Original space'}</a>
     <a href="{start}#model">{'三维模型' if zh else '3D model'}</a>
     <a href="{start}#walkthrough">{'漫游视频' if zh else 'Walkthrough'}</a>
@@ -157,23 +159,25 @@ def build_home(lang):
         "read": "开始阅读教程" if zh else "Read the tutorial",
         "tour": "查看原始空间" if zh else "Explore the original space",
         "caption": "本案例的 Blender 空间重建效果 · 原始扫描参考已隐藏" if zh else "The reconstructed Blender scene · Original scan reference hidden",
-        "steps": "从一份空间资料开始" if zh else "Start with a space you have captured",
+        "steps": "用本案例，或你自己的空间开始" if zh else "Start with this case or your own space",
         "compare": "看一眼现场，再继续改。" if zh else "Compare with the real space. Then keep refining.",
         "compare_body": "打开 Realsee 官方在线实景，无需下载任何资料就能查看原来的空间。把它与 Blender 预览放在一起，看看房间连接、材质和灯光，再告诉 Astra 下一步想改什么。" if zh else "Open the official Realsee tour to see the original space without downloading the exports. Compare it with the Blender previews, check the room connections, materials, and lighting, then tell Astra what to adjust.",
         "compare_alt": "走廊现场照片与 Blender 渲染对比，每组左侧为现场、右侧为渲染" if zh else "Corridor comparison: source photographs on the left, Blender renders on the right in each pair",
         "resources": "带上这些，开始自己的项目" if zh else "Everything you need to get started",
-        "availability": "代码、教程、模型和漫游视频均已公开，可以下载并在自己的项目中探索。" if zh else "Code, tutorials, models, and the walkthrough video are available to download and explore.",
+        "availability": "原始数据、代码、教程、模型和漫游视频均已公开，可以从这套案例资料开始动手。" if zh else "Source data, code, tutorials, models, and the walkthrough video are all available. Try the workflow with the same case inputs.",
     }
     guide, headings = render_markdown(f"docs/tutorial.{lang}.md", page, embedded=True)
     guide_nav = "".join(f'<a href="#{escape(item["id"])}">{escape(item["name"])}</a>' for item in headings)
     resources = (
-        ("quickstart", "01 / PROMPT", "复制一段提示词", "清楚告诉 Astra 要搭什么空间、分几步完成。"),
-        ("code-map", "02 / CODE", "看看建模代码", "从空间分析到 Blender 建模，找到可以借鉴的方法。"),
-        ("releases", "03 / OUTPUT", "了解案例成果", "原生工程、漫游和 USDZ 的文件说明与发布进度。"),
+        ("source-data", "01 / DATA", "下载原始资料", "396 个文件，约 5.66 GiB。按需获取 CAD、扫描模型、全景与 RAW。"),
+        ("quickstart", "02 / PROMPT", "复制一段提示词", "清楚告诉 Astra 要搭什么空间、分几步完成。"),
+        ("code-map", "03 / CODE", "看看建模代码", "从空间分析到 Blender 建模，找到可以借鉴的方法。"),
+        ("releases", "04 / OUTPUT", "了解案例成果", "原生工程、漫游和 USDZ 的文件说明与发布进度。"),
     ) if zh else (
-        ("quickstart", "01 / PROMPT", "Grab a starting prompt", "Tell Astra what to build and how to work through the space."),
-        ("code-map", "02 / CODE", "Explore the modeling code", "Find useful methods, from spatial analysis to Blender modeling."),
-        ("releases", "03 / OUTPUT", "See the case deliverables", "Details and availability for native scenes, the walkthrough, and USDZ."),
+        ("source-data", "01 / DATA", "Download the source data", "396 files, 5.66 GiB. Fetch CAD, scan models, panoramas, and RAW as needed."),
+        ("quickstart", "02 / PROMPT", "Grab a starting prompt", "Tell Astra what to build and how to work through the space."),
+        ("code-map", "03 / CODE", "Explore the modeling code", "Find useful methods, from spatial analysis to Blender modeling."),
+        ("releases", "04 / OUTPUT", "See the case deliverables", "Details and availability for native scenes, the walkthrough, and USDZ."),
     )
     resource_html = "".join(f'<a class="resource" href="{url(f"{lang}/{key}.html")}"><span class="kicker">{kicker}</span><h3>{escape(title)} ↗</h3><p>{escape(text)}</p></a>'
                             for key, kicker, title, text in resources)
@@ -182,7 +186,8 @@ def build_home(lang):
   <div class="hero-copy">
     <p class="eyebrow">A SPACE, REBUILT WITH AI</p>
     <h1>{copy['title']}</h1><p class="lead">{copy['lead']}</p>
-    <div class="actions"><a class="button" href="#tutorial">{copy['read']}</a><a class="button secondary" href="#original-space">{copy['tour']}</a><a class="button secondary" href="#walkthrough">{'播放漫游视频' if zh else 'Watch the walkthrough'}</a></div>
+    <div class="actions"><a class="button" href="#tutorial">{copy['read']}</a><a class="button secondary" href="{url(f'{lang}/source-data.html')}">{'下载原始数据' if zh else 'Download source data'}</a><a class="button secondary" href="#original-space">{copy['tour']}</a><a class="button secondary" href="#walkthrough">{'播放漫游视频' if zh else 'Watch the walkthrough'}</a></div>
+    <p class="media-note">{'本案例原始资料已公开 · 396 个文件 · 5.66 GiB · 支持按需下载' if zh else 'Original case inputs available · 396 files · 5.66 GiB · Download only what you need'}</p>
   </div>
 </section>
 <section class="section" id="tutorial">

@@ -14,7 +14,22 @@
 
 想对照看看原来的空间，可以直接打开 [Realsee 官方在线实景](https://realsee.ai/O3eeL2R3)。不用下载模型或扫描资料，就能在线逛一逛，和本文的 Blender 重建效果做比较。
 
-## 1. 从 Realsee 下载附加产物
+## 1. 准备 Realsee 资料
+
+可以直接用本次案例跟着做，也可以重建自己拍摄的空间。
+
+**使用本次案例。** [案例原始数据](../data/README.zh-CN.md)已通过 Git LFS 提供，共 396 个文件，约 5.66 GiB，包含模型、贴图、点云、全景图和 CAD。安装 [Git LFS](https://git-lfs.com/) 后，下载原始资料：
+
+```sh
+GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/realsee-developer/realsee-astra-blender.git
+cd realsee-astra-blender
+git lfs install --local
+git lfs pull --include='data/**' --exclude=''
+```
+
+下载完成后，资料就在 `data/` 中，可以继续第 2 步。已经克隆过仓库的话，在仓库根目录执行最后两条命令即可。[数据说明](../data/README.zh-CN.md)也提供了先下载一部分资料的方式。建模前要先拉取 LFS 实际文件；源码检出中的小文本指针不能用作建模输入。
+
+**使用自己的空间。** 从 Realsee 下载这个项目的附加产物：
 
 打开 Realsee 一站式制作平台，进入自己的 VR 项目，在预览页面上方找到“下载中心”，选择需要的产物，生成后下载。[官方模型下载说明](https://www.realsee.com/book/xBxQ8gg0/e0Ry7TVN?utm_source=realsee-astra-blender&utm_medium=referral&utm_campaign=editable-space&utm_content=zh-tutorial-model)
 
@@ -39,7 +54,7 @@
 
 这里的“调用 Blender”，就是让 Astra 把你的要求转成建模操作，并在本机 Blender 里执行。你可以用自然语言安排任务，过程中打开工程看看结果，再继续提修改意见。
 
-先安装好 Blender，新建一个项目文件夹，把下载的资料放进 `data/`，然后在 Codex 中打开这个项目目录。准备时只需要这样：
+先安装好 Blender，在 Codex 中打开克隆好的仓库。如果使用自己的空间，就另外新建一个项目文件夹，把资料放进 `data/`，保留本次案例的原始文件。准备时只需要这样：
 
 ```text
 我的空间建模项目/
@@ -137,6 +152,6 @@
 
 这个项目最后完成了[可编辑的原生工程](releases.md#案例文件)，也制作了一段 [85 秒的漫游视频](releases.md#案例文件)。空间从原来的扫描资料，变成了可以继续调整、渲染和展示的 Blender 场景。代码、预览图、模型与视频都已公开，下载方式见案例文件说明。
 
-如果你手里已经有一个 Realsee 项目，可以从下载附加产物开始，把资料放进文件夹，让 Astra 先搭出第一版空间。打开看看，再告诉它下一步想改什么。
+从[本次案例资料](../data/README.zh-CN.md)或自己 Realsee 项目的附加产物开始，让 Astra 先搭出第一版空间。打开看看，再告诉它下一步想改什么。
 
 也欢迎带着你的空间模型来 [Discord 交流](https://discord.gg/2BcZpmdZj)，分享效果，一起聊聊建模中遇到的问题。

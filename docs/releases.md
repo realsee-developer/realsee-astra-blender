@@ -2,6 +2,8 @@
 
 简体中文 | [English](releases.en.md)
 
+[案例原始数据](../data/README.zh-CN.md)也已通过 Git LFS 提供，共 396 个文件，约 5.66 GiB，可以用来开始自己的重建。下方列出的是重建后的模型与视频，与原始资料分开下载。
+
 ## 案例文件
 
 以下公开成果已通过 Git LFS 提供。点击文件名打开 GitHub 文件页面下载，或按下方说明克隆仓库。
@@ -20,12 +22,16 @@
 
 ## 下载模型与视频
 
-安装 [Git LFS](https://git-lfs.com/) 并克隆仓库，然后在仓库根目录运行：
+安装 [Git LFS](https://git-lfs.com/) 后，下载重建后的模型与视频：
 
 ```sh
+GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/realsee-developer/realsee-astra-blender.git
+cd realsee-astra-blender
 git lfs install --local
-git lfs pull
+git lfs pull --include='artifacts/**' --exclude=''
 ```
+
+已有本地仓库时，在仓库根目录执行最后两条命令即可。建模输入的下载方式见[原始数据说明](../data/README.zh-CN.md)。
 
 完成后直接用 Blender 打开 `artifacts/reconstruction_native.blend`。继续加工时，把新版本保存到本地 `output/`。USDZ 的动力学需要支持 USD Physics 的软件，普通模型查看器主要用于看模型。
 
@@ -33,7 +39,7 @@ git lfs pull
 
 公开模型已去除现场二维码：纸张和包装保留几何，相关材质改为纯色；包含二维码的部分扫描贴图也已移除，隐藏扫描参考保留几何。视频使用局部遮罩处理对应区域。
 
-公开模型包含其余随工程打包的现场纹理及隐藏扫描参考；原始 `data/` 中的整套点云、全景、RAW 和其他下载资料不随仓库提供。素材范围见[数据与许可](data-and-license.md)。
+公开模型包含其余随工程打包的现场纹理及隐藏扫描参考。[原始点云、全景、RAW 和其他导出资料](../data/README.zh-CN.md)已在 `data/` 中按原样公开，包含现场二维码；上述模型与视频保留已有去码处理。素材范围见[数据与许可](data-and-license.md)。
 
 ## 维护者更新文件
 
