@@ -37,6 +37,17 @@ class LfsTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "index must contain"):
                 public_tree.check_lfs_content(path, content)
 
+    def test_published_source_requires_manifest_identity(self):
+        content = b"authorized original source"
+        name = "data/panorama/1.jpg"
+        entries = {name: {"sha256": hashlib.sha256(content).hexdigest(),
+                          "bytes": len(content)}}
+        public_tree.check_data_pointer(name, pointer_for(content), entries)
+        with self.assertRaisesRegex(ValueError, "not in the published"):
+            public_tree.check_data_pointer("data/private.jpg", pointer_for(content), entries)
+        with self.assertRaisesRegex(ValueError, "differs from"):
+            public_tree.check_data_pointer(name, pointer_for(b"other source"), entries)
+
     def test_mismatched_pointer_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "scene.blend"

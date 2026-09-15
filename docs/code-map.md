@@ -2,7 +2,7 @@
 
 简体中文 | [English](code-map.en.md)
 
-公开目录精选 60 个 Python 脚本和 1 份路线 JSON。它保留早期空间构建示例及其本地导入依赖，另收录来源阅读、对照、编辑验证与扩展示例。原始扫描、照片、测量结果和历史检查点不随代码提供。详细输入见 [脚本导航](../scripts/README.md)。
+公开目录精选 60 个 Python 脚本和 1 份路线 JSON。它保留早期空间构建示例及其本地导入依赖，另收录来源阅读、对照、编辑验证与扩展示例。原始扫描与照片通过 Git LFS 在 [data/](../data/README.zh-CN.md) 中提供。历史测量结果、研究记录与检查点仍留在本地；精选代码不是开箱即用的完整复现流程。详细输入见 [脚本导航](../scripts/README.md)。
 
 ```text
 自己的 Realsee 附加产物
@@ -27,7 +27,7 @@
 
 `build_scene` 导入区域构建、`build_structure`、`native_api`、材质和早期细节模块；这些模块的本地 Python 导入依赖都保留在精选目录中。`cad_structure_check` 依赖 `build_structure`；两项局部 CAD 测量依赖 `cad_analysis`；USDZ 重开渲染复用 `render_comparisons` 的相机设置。
 
-本地导入完整不等于数据链完整。建模还会读取 `research/` 的配准、区域和测量 JSON，`output/assets/` 的来源纹理，以及 `output/checkpoints/` 的旧场景。动画需要已完成场景与审核记录；USDZ 案例的完整材质烘焙/修补过程未纳入本次精选。将这些文件当作方法参考，让 agent 针对自己的资料重新组织步骤。
+本地导入与原始输入齐全，不等于数据链完整。建模还会读取 `research/` 的配准、区域和测量 JSON，`output/assets/` 的来源纹理，以及 `output/checkpoints/` 的旧场景。动画需要已完成场景与审核记录；USDZ 案例的完整材质烘焙/修补过程未纳入本次精选。将这些文件当作方法参考，让 agent 针对自己的资料重新组织步骤。
 
 ## 为什么不把全部历史脚本放进主目录
 

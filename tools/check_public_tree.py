@@ -1,6 +1,7 @@
-"""Check files Git would publish; never inspect ignored raw data or output."""
+"""Check public files, including the explicitly published source-data manifest."""
 import ast
 import hashlib
+import json
 from pathlib import Path
 import re
 import subprocess
@@ -35,24 +36,42 @@ def check_lfs_content(path: Path, pointer: bytes) -> None:
             raise ValueError("LFS binary SHA256 differs from Git pointer")
 
 
+def check_data_pointer(name: str, pointer: bytes, entries: dict) -> None:
+    if name not in entries:
+        raise ValueError("source file is not in the published data manifest")
+    entry = entries[name]
+    if parse_lfs_pointer(pointer) != (entry["sha256"], entry["bytes"]):
+        raise ValueError("LFS pointer differs from the published data manifest")
+
+
 def main() -> None:
     result = subprocess.check_output(
         ["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z"], cwd=ROOT)
     names = sorted(set(result.decode().split("\0")) - {""})
     public = set(names)
+    manifest = json.loads((ROOT / "data/manifest.json").read_text(encoding="utf-8"))
+    data_entries = {entry["path"]: entry for entry in manifest["files"]}
+    data_metadata = {"data/README.md", "data/README.zh-CN.md",
+                     "data/manifest.json", "data/SHA256SUMS"}
     attributes = subprocess.check_output(
         ["git", "check-attr", "-z", "filter", "--", *names], cwd=ROOT).decode().split("\0")
     lfs = {attributes[i] for i in range(0, len(attributes) - 1, 3)
            if attributes[i + 2] == "lfs"}
-    problems = []
+    problems = [f"{name}: published source missing from Git"
+                for name in sorted(data_entries.keys() - public)]
     total = 0
     personal_path = re.compile(r"/(?:Users|home)/[^/\s]+/|[A-Za-z]:\\Users\\[^\\\s]+\\")
     secret = re.compile(r"AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9]{30,}|"
                         r"sk-[A-Za-z0-9]{24,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----")
     for name in names:
         path = ROOT / name
-        if name.split("/")[0] in {"data", "output", "research"}:
+        if name.split("/")[0] in {"output", "research"}:
             problems.append(f"{name}: private/generated directory included")
+        if name.startswith("data/") and name not in data_metadata:
+            if name not in data_entries:
+                problems.append(f"{name}: source file is not in the published data manifest")
+            if name not in lfs:
+                problems.append(f"{name}: published source data must use Git LFS")
         if path.is_symlink():
             problems.append(f"{name}: symlink in public files")
             continue
@@ -72,6 +91,8 @@ def main() -> None:
             else:
                 pointer = subprocess.check_output(["git", "show", f":{name}"], cwd=ROOT)
                 try:
+                    if name.startswith("data/"):
+                        check_data_pointer(name, pointer, data_entries)
                     check_lfs_content(path, pointer)
                 except ValueError as error:
                     problems.append(f"{name}: {error}")

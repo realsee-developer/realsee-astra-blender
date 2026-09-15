@@ -2,7 +2,7 @@
 
 [简体中文](code-map.md) | English
 
-The public selection contains 60 Python scripts and one route JSON file. It includes early examples of building the space and their local import dependencies, alongside examples of source inspection, comparison, editing checks, and extensions. Original scans, photographs, measurements, and historical checkpoints are not included. See the [script guide](../scripts/README.en.md) for detailed inputs.
+The public selection contains 60 Python scripts and one route JSON file. It includes early examples of building the space and their local import dependencies, alongside examples of source inspection, comparison, editing checks, and extensions. Original scans and photographs are available through Git LFS in [data/](../data/README.md). Historical measurements, research records, and checkpoints remain local; this selection is not a complete, turnkey reproduction pipeline. See the [script guide](../scripts/README.en.md) for detailed inputs.
 
 ```text
 Your Realsee exports
@@ -30,7 +30,7 @@ Your Realsee exports
 
 `build_scene` imports the area builders, `build_structure`, `native_api`, materials, and early detail modules. Their local Python import dependencies are all included in the selection. `cad_structure_check` depends on `build_structure`; two local CAD measurement scripts depend on `cad_analysis`; the USDZ round-trip renderer reuses camera settings from `render_comparisons`.
 
-Having all local imports does not mean having the entire data pipeline. Modeling also reads alignment, area, and measurement JSON from `research/`, source textures from `output/assets/`, and older scenes from `output/checkpoints/`. Animation requires the completed scene and review records. The full material baking and repair process for the USDZ case is outside this selection. Use these files as method references and let your agent organize the steps around your own data.
+Having all local imports and the original inputs does not mean having the entire data pipeline. Modeling also reads alignment, area, and measurement JSON from `research/`, source textures from `output/assets/`, and older scenes from `output/checkpoints/`. Animation requires the completed scene and review records. The full material baking and repair process for the USDZ case is outside this selection. Use these files as method references and let your agent organize the steps around your own data.
 
 ## Why the repository includes selected historical scripts
 
