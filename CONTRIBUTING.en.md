@@ -7,7 +7,7 @@ Contributions to the getting-started documentation, prompts, preparation tools, 
 - Put new general-purpose preparation features in `tools/` and their tests in `tests/`.
 - `scripts/` contains case-study code. Provide the scene data described in its guide before running it. Do not treat its historical `test_*.py` checks as an automated unit-test suite.
 - Use project-relative paths. Discover Blender through PATH or an explicit argument; do not hard-code personal machine directories.
-- Do not commit your own `data/`, output models, rendered frame sequences, virtual environments, or access credentials. Put previews in `docs/assets/`. Put reviewed public deliverables in `artifacts/`, update the `.gitignore` allowlist, and use Git LFS.
+- Preserve the published original case inputs and their directory structure in `data/`; see the [data guide](data/README.md). Other users’ private inputs remain excluded unless explicitly authorized and reviewed for publication. Do not commit private input data, output models, rendered frame sequences, virtual environments, or access credentials. Put previews in `docs/assets/`. Put reviewed public deliverables in `artifacts/`, update the `.gitignore` allowlist, and use Git LFS.
 - This repository uses a public allowlist for `scripts/`. When adding a case script, update both `.gitignore` and the [script guide](scripts/README.en.md).
 
 Before submitting, run:
