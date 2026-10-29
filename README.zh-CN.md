@@ -68,7 +68,7 @@ python3 tools/project.py smoke
 
 案例最终产物包括原生 `.blend`、可编辑漫游工程、85 秒视频和 USDZ 首版。代码、教程、预览图及大型模型和视频现已公开；大型文件通过 Git LFS 提供。文件清单见[案例文件说明](docs/releases.md)。
 
-整套原始扫描及全景数据也通过 Git LFS 提供。历史测量结果、研究记录与中间检查点仍留在本地，因此精选脚本并不是开箱即用的完整复现流程。代码、提示词和原创文档采用 [MIT](LICENSE)，原始资料与案例素材的权利单独说明，见[数据与许可](docs/data-and-license.md)。
+整套原始扫描及全景数据也通过 Git LFS 提供。历史测量结果、研究记录与中间检查点仍留在本地，因此精选脚本并不是开箱即用的完整复现流程。代码、提示词和原创文档采用 [PolyForm-Noncommercial-1.0.0](LICENSE)，原始资料与案例素材的权利单独说明，见[数据与许可](docs/data-and-license.md)。
 
 ## 开发与贡献
 
@@ -78,3 +78,8 @@ python3 tools/check_public_tree.py
 ```
 
 这两项检查不需要 Blender 或原始场景数据。修改 Blender 调用流程时，再执行上面的 `smoke`。欢迎分享自己的数据组织、建模提示词或工具改进；提交方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+
+## 当前代码许可
+
+本项目明确标示的原创代码、提示词和文档采用 [PolyForm Noncommercial License 1.0.0](LICENSE)，标准标识为 `PolyForm-Noncommercial-1.0.0`。具体允许用途、修改与分发条件以许可原文为准；SDK、第三方组件、原始资料及模型素材继续遵守各自协议。历史版本的原有授权不会因本次变更或 Git 提交整理而撤销。

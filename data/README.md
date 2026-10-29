@@ -50,4 +50,4 @@ shasum -a 256 -c data/SHA256SUMS
 
 The originals are publicly shared as-is with the project owner's authorization, including photographed QR codes and original image metadata. Existing models and video in `artifacts/` remain the previously prepared public copies; their earlier QR removals are unchanged.
 
-The case data is provided for demonstration and learning reference. The repository's MIT license covers code, prompts, and original documentation; it does not relicense source scans, photographs, depicted brands, or third-party materials. See [data and licensing](../docs/data-and-license.en.md) for the distinction.
+The case data is provided for demonstration and learning reference. The repository's PolyForm-Noncommercial-1.0.0 license covers code, prompts, and original documentation; it does not relicense source scans, photographs, depicted brands, or third-party materials. See [data and licensing](../docs/data-and-license.en.md) for the distinction.

@@ -4,5 +4,6 @@
   "type": "module",
   "dependencies": {
     "three": "0.186.0"
-  }
+  },
+  "license": "PolyForm-Noncommercial-1.0.0"
 }

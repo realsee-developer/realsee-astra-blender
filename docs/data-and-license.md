@@ -2,13 +2,13 @@
 
 简体中文 | [English](data-and-license.en.md)
 
-这个仓库分享用 Realsee 附加产物协同 Astra、Blender 重建空间的方法、提示词和代码。代码、提示词及原创文档采用 [MIT 许可证](../LICENSE)。
+这个仓库分享用 Realsee 附加产物协同 Astra、Blender 重建空间的方法、提示词和代码。代码、提示词及原创文档采用 [PolyForm-Noncommercial-1.0.0 许可证](../LICENSE)。
 
 ## 文件放在哪里
 
 | 内容 | 安排 |
 | --- | --- |
-| 提示词、代码、原创文档 | 随 Git 仓库发布，采用 MIT。 |
+| 提示词、代码、原创文档 | 随 Git 仓库发布，采用 PolyForm-Noncommercial-1.0.0。 |
 | `docs/assets/` 中的案例预览 | 已获授权公开，便于浏览建模效果；素材许可范围见下文。 |
 | 最终模型与视频 | 已整理的公开副本通过 Git LFS 提供，文件与下载说明见[案例文件](releases.md)。 |
 | `data/` | 已授权公开的案例原始资料通过 Git LFS 提供，见[数据说明](../data/README.zh-CN.md)。其他使用者的私人导出仍不提交，除非明确授权并经过公开审查。 |
@@ -21,7 +21,7 @@
 
 ## 代码与素材分开说明
 
-MIT 适用于本项目的代码、提示词和原创文档正文，不会自动改变 Realsee 原始导出、照片纹理、第三方生成资产或其他第三方内容的权利。已授权公开的案例原始资料、预览和最终模型可作为案例展示与学习参考；素材权利仍属于对应来源，公开不构成新的商业再许可。详见[原始数据说明](../data/README.zh-CN.md)及[案例素材说明](../artifacts/NOTICE.txt)，不将原始数据集或整个模型包统一标为 MIT。
+PolyForm-Noncommercial-1.0.0 适用于本项目的代码、提示词和原创文档正文，不会自动改变 Realsee 原始导出、照片纹理、第三方生成资产或其他第三方内容的权利。已授权公开的案例原始资料、预览和最终模型可作为案例展示与学习参考；素材权利仍属于对应来源，公开不构成新的商业再许可。详见[原始数据说明](../data/README.zh-CN.md)及[案例素材说明](../artifacts/NOTICE.txt)，不将原始数据集或整个模型包统一标为 PolyForm-Noncommercial-1.0.0。
 
 写作过程参考了 [ComposioHQ 的 Content Research Writer](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/content-research-writer/SKILL.md)。仓库保留来源链接，不再分发该技能全文。外部工具和依赖继续使用各自的许可证。
 

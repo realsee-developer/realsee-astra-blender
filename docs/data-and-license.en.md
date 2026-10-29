@@ -2,13 +2,13 @@
 
 [简体中文](data-and-license.md) | English
 
-This repository shares methods, prompts, and code for reconstructing a space with Realsee exports, Astra, and Blender. Code, prompts, and original documentation use the [MIT license](../LICENSE).
+This repository shares methods, prompts, and code for reconstructing a space with Realsee exports, Astra, and Blender. Code, prompts, and original documentation use the [PolyForm-Noncommercial-1.0.0 license](../LICENSE).
 
 ## Where files belong
 
 | Content | Arrangement |
 | --- | --- |
-| Prompts, code, and original documentation | Published in Git under MIT. |
+| Prompts, code, and original documentation | Published in Git under PolyForm-Noncommercial-1.0.0. |
 | Case previews in `docs/assets/` | Authorized for public sharing so readers can see the modeling results; see the material licensing scope below. |
 | Final models and video | The reviewed public copies are available through Git LFS; see [case files](releases.en.md) for files and download instructions. |
 | `data/` | Authorized original case inputs through Git LFS; see the [data guide](../data/README.md). Other users’ private exports remain excluded unless explicitly authorized and reviewed for publication. |
@@ -21,7 +21,7 @@ The original case inputs contain 396 files totaling 6,079,895,800 bytes (about 5
 
 ## Code and materials have separate licensing scopes
 
-MIT applies to this project's code, prompts, and original documentation text. It does not automatically change the rights to original Realsee exports, photographic textures, third-party generated assets, or other third-party content. The original case inputs, previews, and final models authorized for public sharing can serve as case demonstrations and learning references. Their material rights remain with the respective sources; publication does not grant a new commercial sublicense. See the [source data guide](../data/README.md) and the [case asset notice](../artifacts/NOTICE.txt). Neither the source dataset nor the entire model package is labeled MIT.
+PolyForm-Noncommercial-1.0.0 applies to this project's code, prompts, and original documentation text. It does not automatically change the rights to original Realsee exports, photographic textures, third-party generated assets, or other third-party content. The original case inputs, previews, and final models authorized for public sharing can serve as case demonstrations and learning references. Their material rights remain with the respective sources; publication does not grant a new commercial sublicense. See the [source data guide](../data/README.md) and the [case asset notice](../artifacts/NOTICE.txt). Neither the source dataset nor the entire model package is labeled PolyForm-Noncommercial-1.0.0.
 
 The writing process drew on [ComposioHQ's Content Research Writer](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/content-research-writer/SKILL.md). This repository links to the source without redistributing the full skill text. External tools and dependencies retain their own licenses.
 

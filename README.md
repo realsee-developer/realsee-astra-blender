@@ -68,7 +68,7 @@ The scripts record the implementation for this particular space. Some use specif
 
 The case produced a native `.blend`, an editable walkthrough project, an 85-second video, and an initial USDZ export. Code, tutorials, previews, models, and video are available. Large files are provided through Git LFS; see the [artifact list](docs/releases.en.md).
 
-The original scan and panorama dataset is also available through Git LFS. Historical measurements, research records, and intermediate checkpoints remain local, so the selected scripts are not a complete, turnkey reproduction pipeline. Code, prompts, and original documentation use the [MIT license](LICENSE). The source data and case assets have separate rights; see [data and licensing](docs/data-and-license.en.md).
+The original scan and panorama dataset is also available through Git LFS. Historical measurements, research records, and intermediate checkpoints remain local, so the selected scripts are not a complete, turnkey reproduction pipeline. Code, prompts, and original documentation use the [PolyForm-Noncommercial-1.0.0 license](LICENSE). The source data and case assets have separate rights; see [data and licensing](docs/data-and-license.en.md).
 
 ## Development and contributions
 
@@ -78,3 +78,7 @@ python3 tools/check_public_tree.py
 ```
 
 Neither check requires Blender or the original scene data. If you change how Blender is invoked, also run `smoke`. Contributions to input organization, modeling prompts, and tooling are welcome; see [CONTRIBUTING.en.md](CONTRIBUTING.en.md).
+
+## Current code license
+
+The identified Realsee-authored code is available under [PolyForm Noncommercial License 1.0.0](LICENSE), SPDX `PolyForm-Noncommercial-1.0.0`. The unmodified license governs permitted purposes, modification and distribution. This is source-available licensing, not an OSI-approved open source license. SDKs, third-party components and assets retain their separate terms. Earlier licensed copies retain their applicable rights, irrespective of this license change or Git history consolidation.

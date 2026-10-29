@@ -1,6 +1,6 @@
 Case assets for Realsee Astra Blender
 
-The project author has authorized public sharing of these previews and final models for demonstration and learning reference. The repository MIT license covers code, prompts and original documentation. It does not relicense original scan imagery, textures, third-party generated content, depicted artwork, or other third-party materials embedded in the case assets. Their respective rights remain with their sources.
+The project author has authorized public sharing of these previews and final models for demonstration and learning reference. The repository PolyForm-Noncommercial-1.0.0 license covers code, prompts and original documentation. It does not relicense original scan imagery, textures, third-party generated content, depicted artwork, or other third-party materials embedded in the case assets. Their respective rights remain with their sources.
 
 The .blend files include editable native geometry, packed textures, and a hidden original scan reference. The source data directory (full point clouds, panoramas, RAW images and other exports) is not part of the public repository.
 
